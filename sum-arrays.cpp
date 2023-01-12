@@ -1,11 +1,11 @@
 #include <vector>
 
 int sum(std::vector<int> nums) {
-  double sumd = 0.0; // initialzie return variable
+  if (nums.size() == 0)
+    return 0;
+  
+  int sum = 0;
   for (int i = 0; i < nums.size(); i++)
-  {
-    // loop through each item and add it to the summation
-    sumd += nums[i];
-  }
-  return sumd; // return the summation
+    sum += nums[i];
+  return sum;
 }
